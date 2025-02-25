@@ -1,0 +1,110 @@
+body {
+  background: url(Shipping_Image.jpg) no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'Arimo', sans-serif;
+  font-weight: 300;
+  color: #200;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  max-width: 500px;
+  position: relative; /* Needed for background text and image positioning */
+}
+
+.background-text {
+  position: absolute;
+  top: -40px; /* Adjust as needed */
+  left: -80%;
+  transform: translateX(-40%);
+   font-family: 'Pacifico', cursive;
+  font-size: 48px;
+  color: rgba(black);
+  z-index: 1;
+}
+
+.login {
+  padding: 0; /* Remove default padding */
+}
+
+.login h4 {
+  font-family: 'Arimo', sans-serif;
+  font-weight: 700;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 10px;
+  display: flex; /* Arrange labels and inputs side-by-side */
+}
+
+.form-group label {
+  width: 40%;
+  margin-bottom: 5px;
+  font-weight: 500;
+  color: #333;
+  text-align: right; /* Align right for side-by-side layout */
+}
+
+select, input[type="text"] {
+  width: 60%; /* Adjust input width (adjust based on label width) */
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+select:focus, input[type="text"]:focus {
+  border-color: #fcb69f;
+}
+
+.btn {
+  background-color: #fcb69f;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #ffecd2;
+  color: #333;
+}
+
+.prediction {
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+/* Tagline Styles - Choose one of the following options */
+
+/* Option 1: Taglines displayed above the container */
+.tagline-container {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Pacifico', cursive;
+  font-size: 24px;
+  color: #200;
+  z-index: 2;
+}
