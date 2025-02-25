@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+  <meta charset="UTF-8">
+  <title>Ecommerce Shipping Prediction</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Arimo:700' rel='stylesheet' type='text/css'>  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <div class="background-text">Fast & Reliable Shipping</div>
+      <h4>Ecommerce Shipment Prediction</h4>
+      <form action="/y_predict" method="post">
+        <div class="form-group">
+          <label for="Product_importance">Product Importance:</label>
+          <select name="Product_importance" id="Product_importance" required>
+            <option value="">Select</option>
+            <option value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="Cost_of_the_Product">Product Cost:</label>
+          <input type="text" name="Cost_of_the_Product" id="Cost_of_the_Product" placeholder="Enter Cost" required />
+        </div>
+        <div class="form-group">
+          <label for="Customer_care_calls">Customer Care Calls:</label>
+          <input type="text" name="Customer_care_calls" id="Customer_care_calls" placeholder="Enter Number" required />
+        </div>
+        <div class="form-group">
+          <label for="Customer_rating">Customer Rating (1-5):</label>
+          <input type="text" name="Customer_rating" id="Customer_rating" placeholder="Enter Rating" required />
+        </div>
+        <div class="form-group">
+          <label for="Prior_purchases">No. of Prior Purchases:</label>
+          <input type="text" name="Prior_purchases" id="Prior_purchases" placeholder="Enter Number" required />
+        </div>
+        <div class="form-group">
+          <label for="Discount_offered">Discount Offered (%):</label>
+          <input type="text" name="Discount_offered" id="Discount_offered" placeholder="Enter Discount" required />
+        </div>
+        <div class="form-group">
+          <label for="Weight_in_gms">Net Weight in gms:</label>
+          <input type="text" name="Weight_in_gms" id="Weight_in_gms" placeholder="Enter Weight" required />
+        </div>
+        <button type="submit" class="btn btn-primary">Predict</button>
+      </form>
+      <div class="prediction">{{ prediction_text }}</div>
+    </div>
+  </div>
+</body>
+</html>
